@@ -1,0 +1,4 @@
+low_limit: 3
+low_mix_intervel: 5
+num_reject_skip: 25
+num_reject_skip_low: 10

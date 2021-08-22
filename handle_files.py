@@ -24,6 +24,9 @@ def load_file(args):
         assert args.mode in ['uniform', 'skewed'], \
             f'Please provide a valid method to use! Choices: [uniform, skewed]'
 
+    if args.method == 'low_triphone_count_priority' and args.mode == 'skewed':
+        raise Exception(f'{args.mode} mode is not implemented for {args.method}')
+
     selected_audio_files = validate_audio(dct, args)
     audio_dur_dct = None
     if args.audio_dur_file is not None:
